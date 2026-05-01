@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Node
+node_modules/
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Local dev
+.cache/
+
+# Environment
+.env
+.env.local
+.env*.local

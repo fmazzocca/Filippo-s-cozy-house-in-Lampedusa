@@ -1,0 +1,12 @@
+/* Palette tokens — Lampedusa-vibes */
+:root {
+  --calce:    #FAFAF7;
+  --navy:     #0F2C3F;
+  --turchese: #2BA8B0;
+  --corallo:  #E8825B;
+  --sabbia:   #EFE6D5;
+}
+
+html {
+  scroll-behavior: smooth;
+}

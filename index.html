@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filippo's Cozy House — Lampedusa</title>
+  <meta name="description" content="Casa vacanze a Lampedusa, Via Trapani 1. Guida pratica per ospiti: dove siamo, come muoversi, spiagge, ristoranti, escursioni in barca." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Filippo's Cozy House — Lampedusa" />
+  <meta property="og:description" content="La tua guida pratica per Lampedusa: dove siamo, come muoversi, spiagge, ristoranti, escursioni in barca." />
+  <meta property="og:image" content="https://fmazzocca.github.io/Filippo-s-cozy-house-Lampedusa/assets/house/foto_casa_1.avif" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Filippo's Cozy House — Lampedusa" />
+  <meta name="twitter:description" content="La tua guida pratica per Lampedusa." />
+  <meta name="twitter:image" content="https://fmazzocca.github.io/Filippo-s-cozy-house-Lampedusa/assets/house/foto_casa_1.avif" />
+
+  <!-- Favicon (emoji, no asset needed) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏖️%3C/text%3E%3C/svg%3E" />
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            calce:    '#FAFAF7',
+            navy:     '#0F2C3F',
+            turchese: '#2BA8B0',
+            corallo:  '#E8825B',
+            sabbia:   '#EFE6D5',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            body:  ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="font-body bg-calce text-navy antialiased">
+
+  <header class="sticky top-0 z-50 backdrop-blur bg-calce/80 border-b border-sabbia">
+    <nav class="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between gap-4">
+      <a href="#hero" class="font-serif text-lg md:text-xl tracking-tight">Filippo's Cozy House</a>
+
+      <ul class="hidden md:flex items-center gap-6 text-sm">
+        <li><a href="#about"    class="hover:text-turchese transition" data-it="La casa"       data-en="The House">La casa</a></li>
+        <li><a href="#location" class="hover:text-turchese transition" data-it="Dove siamo"    data-en="Find us">Dove siamo</a></li>
+        <li><a href="#mobility" class="hover:text-turchese transition" data-it="Come muoversi" data-en="Getting around">Come muoversi</a></li>
+        <li><a href="#beaches"  class="hover:text-turchese transition" data-it="Spiagge"       data-en="Beaches">Spiagge</a></li>
+        <li><a href="#boat"     class="hover:text-turchese transition" data-it="In barca"      data-en="By boat">In barca</a></li>
+        <li><a href="#food"     class="hover:text-turchese transition" data-it="Ristoranti & Bar" data-en="Restaurants & Bars">Ristoranti & Bar</a></li>
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-1 text-xs">
+          <button data-lang-btn="it" aria-label="Passa all'italiano" aria-pressed="false" class="px-2 py-1 rounded hover:bg-sabbia transition">IT</button>
+          <span class="text-navy/40">·</span>
+          <button data-lang-btn="en" aria-label="Switch to English" aria-pressed="false" class="px-2 py-1 rounded hover:bg-sabbia transition">EN</button>
+        </div>
+        <a href="https://www.airbnb.it/rooms/15082640" target="_blank" rel="noopener" aria-label="Prenota su Airbnb (apre in nuova finestra)"
+           class="hidden sm:inline-flex items-center gap-2 bg-navy text-calce text-xs md:text-sm px-3 md:px-4 py-2 rounded-full hover:bg-corallo transition"
+           data-it="Prenota su Airbnb" data-en="Book on Airbnb">Prenota su Airbnb</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero" class="relative h-[88vh] min-h-[520px] w-full overflow-hidden">
+      <img src="assets/beaches/conigli.jpg"
+           alt="Spiaggia dei Conigli, Lampedusa"
+           class="absolute inset-0 w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-navy/30 via-navy/10 to-navy/60"></div>
+
+      <div class="relative h-full flex flex-col items-center justify-center text-center px-6 text-calce">
+        <span class="inline-block bg-calce/90 text-navy text-[11px] md:text-xs tracking-[0.18em] uppercase px-4 py-2 rounded-full mb-6"
+              data-it="Benvenuto a Lampedusa · Welcome"
+              data-en="Welcome to Lampedusa · Benvenuto">Benvenuto a Lampedusa · Welcome</span>
+
+        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.95] mb-4">Filippo's Cozy House</h1>
+        <p class="text-base md:text-lg opacity-90"
+           data-it="Via Trapani 1 — Lampedusa"
+           data-en="Via Trapani 1 — Lampedusa">Via Trapani 1 — Lampedusa</p>
+
+        <a href="#about"
+           class="mt-10 inline-flex items-center gap-2 bg-corallo text-calce text-sm font-medium px-6 py-3 rounded-full hover:bg-corallo/90 transition shadow-lg"
+           data-it="Scopri la casa"
+           data-en="Discover the house">Scopri la casa</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-20 md:py-28 px-6">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center" data-reveal>
+
+        <div>
+          <span class="inline-block text-xs tracking-[0.2em] uppercase text-turchese mb-4"
+                data-it="La casa"
+                data-en="The House">La casa</span>
+
+          <h2 class="font-serif text-4xl md:text-5xl mb-6 leading-tight"
+              data-it="Una casa accogliente nel cuore di Lampedusa"
+              data-en="A cozy home in the heart of Lampedusa">Una casa accogliente nel cuore di Lampedusa</h2>
+
+          <p class="text-navy/80 leading-relaxed mb-4"
+             data-it="A pochi passi dal porto e dal centro del paese, la nostra casa è il punto di partenza ideale per esplorare Lampedusa. Troverete spazi luminosi e accoglienti, tutto l'essenziale per un soggiorno confortevole, e quella luce mediterranea che entra fin dalla mattina. Il quartiere è tranquillo, ma in pochi minuti a piedi si raggiungono bar, ristoranti e il porto. Vi aspettiamo come ospiti, ma speriamo che vi sentiate subito a casa."
+             data-en="Just a few steps from the port and the town centre, our house is the perfect base to explore Lampedusa. You'll find bright and welcoming spaces, everything you need for a comfortable stay, and that Mediterranean light that fills the rooms from early morning. The neighbourhood is quiet, yet bars, restaurants and the port are just minutes away on foot. We welcome you as guests, but hope you feel right at home.">A pochi passi dal porto e dal centro del paese, la nostra casa è il punto di partenza ideale per esplorare Lampedusa. Troverete spazi luminosi e accoglienti, tutto l'essenziale per un soggiorno confortevole, e quella luce mediterranea che entra fin dalla mattina. Il quartiere è tranquillo, ma in pochi minuti a piedi si raggiungono bar, ristoranti e il porto. Vi aspettiamo come ospiti, ma speriamo che vi sentiate subito a casa.</p>
+
+          <!-- Reviews box -->
+          <a href="https://www.airbnb.it/rooms/15082640" target="_blank" rel="noopener"
+             aria-label="Leggi le recensioni su Airbnb (apre in nuova finestra)"
+             class="mt-8 inline-flex items-center gap-4 bg-sabbia/60 hover:bg-sabbia transition rounded-2xl px-5 py-4 group">
+            <div class="text-3xl">⭐</div>
+            <div class="text-left">
+              <div class="font-semibold text-lg">4.31 ⭐</div>
+              <div class="text-sm text-navy/70 group-hover:text-turchese transition"
+                   data-it="Leggi le recensioni su Airbnb →"
+                   data-en="Read reviews on Airbnb →">Leggi le recensioni su Airbnb →</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Photo gallery via scroll-snap -->
+        <div class="relative">
+          <div class="flex overflow-x-auto snap-x snap-mandatory gap-3 pb-4 -mx-6 px-6 md:mx-0 md:px-0 scroll-smooth" role="region" aria-label="Galleria foto casa">
+            <img src="assets/house/foto_casa_1.avif" class="snap-center shrink-0 w-[85%] md:w-full aspect-[4/3] object-cover rounded-2xl" alt="Filippo's Cozy House - foto 1" loading="lazy" />
+            <img src="assets/house/foto_casa_2.avif" class="snap-center shrink-0 w-[85%] md:w-full aspect-[4/3] object-cover rounded-2xl" alt="Filippo's Cozy House - foto 2" loading="lazy" />
+            <img src="assets/house/foto_casa_3.avif" class="snap-center shrink-0 w-[85%] md:w-full aspect-[4/3] object-cover rounded-2xl" alt="Filippo's Cozy House - foto 3" loading="lazy" />
+            <img src="assets/house/foto_casa_4.avif" class="snap-center shrink-0 w-[85%] md:w-full aspect-[4/3] object-cover rounded-2xl" alt="Filippo's Cozy House - foto 4" loading="lazy" />
+            <img src="assets/house/foto_casa_5.avif" class="snap-center shrink-0 w-[85%] md:w-full aspect-[4/3] object-cover rounded-2xl" alt="Filippo's Cozy House - foto 5" loading="lazy" />
+            <img src="assets/house/foto_casa_6.avif" class="snap-center shrink-0 w-[85%] md:w-full aspect-[4/3] object-cover rounded-2xl" alt="Filippo's Cozy House - foto 6" loading="lazy" />
+            <img src="assets/house/foto_casa_7.avif" class="snap-center shrink-0 w-[85%] md:w-full aspect-[4/3] object-cover rounded-2xl" alt="Filippo's Cozy House - foto 7" loading="lazy" />
+            <img src="assets/house/foto_casa_8.avif" class="snap-center shrink-0 w-[85%] md:w-full aspect-[4/3] object-cover rounded-2xl" alt="Filippo's Cozy House - foto 8" loading="lazy" />
+            <img src="assets/house/foto_casa_9.avif" class="snap-center shrink-0 w-[85%] md:w-full aspect-[4/3] object-cover rounded-2xl" alt="Filippo's Cozy House - foto 9" loading="lazy" />
+            <img src="assets/house/foto_casa_10.avif" class="snap-center shrink-0 w-[85%] md:w-full aspect-[4/3] object-cover rounded-2xl" alt="Filippo's Cozy House - foto 10" loading="lazy" />
+            <img src="assets/house/foto_casa_11.avif" class="snap-center shrink-0 w-[85%] md:w-full aspect-[4/3] object-cover rounded-2xl" alt="Filippo's Cozy House - foto 11" loading="lazy" />
+          </div>
+          <p class="text-xs text-navy/50 text-center mt-2"
+             data-it="Scorri per vedere altre foto →"
+             data-en="Swipe to see more →">Scorri per vedere altre foto →</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location" class="py-20 md:py-28 px-6 bg-sabbia/30">
+      <div class="max-w-6xl mx-auto">
+
+        <div class="text-center mb-12">
+          <span class="inline-block text-xs tracking-[0.2em] uppercase text-turchese mb-3"
+                data-it="Dove siamo" data-en="Find us">Dove siamo</span>
+          <h2 class="font-serif text-4xl md:text-5xl" data-reveal
+              data-it="Via Trapani 1, Lampedusa"
+              data-en="Via Trapani 1, Lampedusa">Via Trapani 1, Lampedusa</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+
+          <!-- Map -->
+          <div class="rounded-2xl overflow-hidden shadow-lg aspect-[4/3] md:aspect-auto md:min-h-[360px]">
+            <iframe
+              src="https://maps.google.com/maps?q=Via+Trapani+1,+92010+Lampedusa+AG,+Italy&t=&z=18&ie=UTF8&iwloc=&output=embed"
+              class="w-full h-full border-0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mappa: Via Trapani 1, Lampedusa">
+            </iframe>
+          </div>
+
+          <!-- Contacts + check-in/out -->
+          <div class="flex flex-col gap-6">
+
+            <div>
+              <h3 class="font-serif text-2xl mb-4"
+                  data-it="Contatti" data-en="Contacts">Contatti</h3>
+              <div class="flex flex-col gap-3">
+                <a href="tel:+393394480402"
+                   class="flex items-center gap-3 bg-calce hover:bg-white border border-sabbia rounded-xl px-4 py-3 transition">
+                  <span class="text-xl" aria-hidden="true">📞</span>
+                  <div>
+                    <div class="font-medium">Daniela</div>
+                    <div class="text-sm text-navy/70">+39 339 448 0402</div>
+                  </div>
+                </a>
+                <a href="tel:+393929385325"
+                   class="flex items-center gap-3 bg-calce hover:bg-white border border-sabbia rounded-xl px-4 py-3 transition">
+                  <span class="text-xl" aria-hidden="true">📞</span>
+                  <div>
+                    <div class="font-medium">Filippo</div>
+                    <div class="text-sm text-navy/70">+39 392 938 5325</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="font-serif text-2xl mb-4"
+                  data-it="Check-in & Check-out" data-en="Check-in & Check-out">Check-in & Check-out</h3>
+              <div class="grid grid-cols-2 gap-3 mb-3">
+                <div class="bg-calce border border-sabbia rounded-xl px-4 py-3">
+                  <div class="text-xs uppercase tracking-wider text-navy/60">Check-in</div>
+                  <div class="font-serif text-2xl"
+                       data-it="dalle 13:00" data-en="from 1:00 PM">dalle 13:00</div>
+                </div>
+                <div class="bg-calce border border-sabbia rounded-xl px-4 py-3">
+                  <div class="text-xs uppercase tracking-wider text-navy/60">Check-out</div>
+                  <div class="font-serif text-2xl"
+                       data-it="entro le 10:00" data-en="by 10:00 AM">entro le 10:00</div>
+                </div>
+              </div>
+              <p class="text-sm text-navy/70 leading-relaxed"
+                 data-it="È sempre possibile lasciare i bagagli prima del check-in o dopo il check-out. Cercheremo di lasciarvi la casa il più a lungo possibile, compatibilmente con arrivi e partenze degli altri ospiti."
+                 data-en="You can always leave your luggage before check-in or after check-out. We will try to give you the house as long as possible, depending on other guests' arrivals and departures.">È sempre possibile lasciare i bagagli prima del check-in o dopo il check-out. Cercheremo di lasciarvi la casa il più a lungo possibile, compatibilmente con arrivi e partenze degli altri ospiti.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOBILITY -->
+    <section id="mobility" class="py-20 md:py-28 px-6">
+      <div class="max-w-6xl mx-auto">
+
+        <div class="text-center mb-12">
+          <span class="inline-block text-xs tracking-[0.2em] uppercase text-turchese mb-3"
+                data-it="Come muoversi" data-en="Getting around">Come muoversi</span>
+          <h2 class="font-serif text-4xl md:text-5xl mb-3" data-reveal
+              data-it="Lampedusa è piccola, ma ti serve un mezzo"
+              data-en="Lampedusa is small, but you'll want a ride">Lampedusa è piccola, ma ti serve un mezzo</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8" data-reveal>
+
+          <!-- Motorino / Macchina -->
+          <article class="bg-calce border border-sabbia rounded-2xl p-6 md:p-8 flex flex-col">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-3xl" aria-hidden="true">🛵</span>
+              <h3 class="font-serif text-2xl"
+                  data-it="Motorino o macchina" data-en="Scooter or car">Motorino o macchina</h3>
+              <span class="ml-auto text-[10px] tracking-widest uppercase bg-corallo text-calce px-2 py-1 rounded-full"
+                    data-it="Consigliato" data-en="Recommended">Consigliato</span>
+            </div>
+            <p class="text-navy/80 leading-relaxed mb-5"
+               data-it="Consigliamo il motorino: ti permette di arrivare ovunque sull'isola senza problemi di parcheggio, soprattutto in alta stagione."
+               data-en="We recommend a scooter: it lets you reach anywhere on the island without parking issues, especially in high season.">Consigliamo il motorino: ti permette di arrivare ovunque sull'isola senza problemi di parcheggio, soprattutto in alta stagione.</p>
+
+            <div class="bg-sabbia/40 rounded-xl p-4 mb-4">
+              <div class="text-xs uppercase tracking-wider text-navy/60 mb-1"
+                   data-it="Noleggio consigliato" data-en="Recommended rental">Noleggio consigliato</div>
+              <div class="font-serif text-xl mb-2">Mikael</div>
+              <a href="tel:+393289229672" class="block text-turchese hover:underline mb-1">📞 +39 328 922 9672</a>
+              <a href="https://www.noleggioautolampedusa.com/chi-siamo/" target="_blank" rel="noopener"
+                 class="block text-turchese hover:underline text-sm">🌐 noleggioautolampedusa.com</a>
+            </div>
+
+            <div class="flex items-start gap-2 text-sm bg-turchese/10 text-navy rounded-lg px-3 py-2 mt-auto">
+              <span aria-hidden="true">🚐</span>
+              <span data-it="Navetta gratuita all'arrivo e alla partenza inclusa"
+                    data-en="Free shuttle on arrival and departure included">Navetta gratuita all'arrivo e alla partenza inclusa</span>
+            </div>
+          </article>
+
+          <!-- Bus -->
+          <article class="bg-calce border border-sabbia rounded-2xl p-6 md:p-8 flex flex-col">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-3xl" aria-hidden="true">🚌</span>
+              <h3 class="font-serif text-2xl"
+                  data-it="Autobus di linea" data-en="Public bus">Autobus di linea</h3>
+            </div>
+            <p class="text-navy/80 leading-relaxed mb-5"
+               data-it="Lampedusa ha due linee bus che collegano le principali zone dell'isola. Economico e comodo per le spiagge più frequentate."
+               data-en="Lampedusa has two bus lines connecting the main areas of the island. Cheap and handy for the busiest beaches.">Lampedusa ha due linee bus che collegano le principali zone dell'isola. Economico e comodo per le spiagge più frequentate.</p>
+
+            <ul class="space-y-3">
+              <li class="bg-sabbia/40 rounded-xl p-4">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="bg-corallo text-calce font-semibold px-2 py-0.5 rounded text-sm">Linea 1</span>
+                  <span class="text-sm text-navy/70"
+                        data-it="Centro ↔ Spiaggia dei Conigli"
+                        data-en="Town ↔ Rabbit Beach">Centro ↔ Spiaggia dei Conigli</span>
+                </div>
+                <p class="text-xs text-navy/60"
+                   data-it="Frequenza e tariffa: chiedi al conducente o all'edicola del porto."
+                   data-en="Frequency and fare: ask the driver or the port newsstand.">Frequenza e tariffa: chiedi al conducente o all'edicola del porto.</p>
+              </li>
+              <li class="bg-sabbia/40 rounded-xl p-4">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="bg-corallo text-calce font-semibold px-2 py-0.5 rounded text-sm">Linea 2</span>
+                  <span class="text-sm text-navy/70"
+                        data-it="Centro ↔ Cala Pisana / aeroporto"
+                        data-en="Town ↔ Cala Pisana / airport">Centro ↔ Cala Pisana / aeroporto</span>
+                </div>
+                <p class="text-xs text-navy/60"
+                   data-it="Frequenza e tariffa: chiedi al conducente o all'edicola del porto."
+                   data-en="Frequency and fare: ask the driver or the port newsstand.">Frequenza e tariffa: chiedi al conducente o all'edicola del porto.</p>
+              </li>
+            </ul>
+
+            <p class="text-xs text-navy/50 mt-4 italic"
+               data-it="ℹ️ Percorsi e orari possono variare: verifica sempre prima di partire."
+               data-en="ℹ️ Routes and times may change: always check before leaving.">ℹ️ Percorsi e orari possono variare: verifica sempre prima di partire.</p>
+            <a href="https://visit.lampedusa.today/trasporti-pubblici-autobus-a-lampedusa/" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-1 text-xs text-turchese hover:underline mt-2"
+               data-it="🔗 Info orari e percorsi →"
+               data-en="🔗 Routes & timetables →">🔗 Info orari e percorsi →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BEACHES -->
+    <section id="beaches" class="py-20 md:py-28 px-6 bg-sabbia/30">
+      <div class="max-w-6xl mx-auto">
+
+        <div class="text-center mb-12">
+          <span class="inline-block text-xs tracking-[0.2em] uppercase text-turchese mb-3"
+                data-it="Spiagge" data-en="Beaches">Spiagge</span>
+          <h2 class="font-serif text-4xl md:text-5xl mb-3" data-reveal
+              data-it="Le spiagge da non perdere"
+              data-en="Beaches you can't miss">Le spiagge da non perdere</h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" data-reveal>
+
+          <article class="bg-calce rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+            <img src="assets/beaches/conigli.jpg" class="aspect-[4/3] w-full object-cover object-top" alt="Spiaggia dei Conigli, Lampedusa" loading="lazy" />
+            <div class="p-5 flex-1 flex flex-col">
+              <h3 class="font-serif text-xl mb-2"
+                  data-it="Spiaggia dei Conigli" data-en="Rabbit Beach">Spiaggia dei Conigli</h3>
+              <p class="text-sm text-navy/70 mb-4 flex-1"
+                 data-it="Una delle spiagge più belle del mondo: sabbia bianca finissima e mare turchese trasparente."
+                 data-en="One of the most beautiful beaches in the world: fine white sand and crystal-clear turquoise sea.">Una delle spiagge più belle del mondo: sabbia bianca finissima e mare turchese trasparente.</p>
+              <a href="https://www.prenotazionespiaggiaconigli.it/prenotazione/index.php" target="_blank" rel="noopener"
+                 class="flex items-start gap-2 text-sm bg-turchese/10 text-navy rounded-lg px-3 py-2 my-3 hover:bg-turchese/20 transition">
+                <span aria-hidden="true">ℹ️</span>
+                <span data-it="Ingresso a prenotazione obbligatoria →"
+                      data-en="Booking required to enter →">Ingresso a prenotazione obbligatoria →</span>
+              </a>
+              <div class="text-xs text-navy/60"
+                   data-it="🛵 12 min in motorino + 15 min a piedi"
+                   data-en="🛵 12 min by scooter + 15 min walk">🛵 12 min in motorino + 15 min a piedi</div>
+            </div>
+          </article>
+
+          <article class="bg-calce rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+            <img src="assets/beaches/cala-pulcino.jpg" class="aspect-[4/3] w-full object-cover" alt="Cala Pulcino, Lampedusa" loading="lazy" />
+            <div class="p-5 flex-1 flex flex-col">
+              <h3 class="font-serif text-xl mb-2">Cala Pulcino</h3>
+              <p class="text-sm text-navy/70 mb-4 flex-1"
+                 data-it="Cala selvaggia raggiungibile con una bella camminata: pochi turisti e acqua spettacolare."
+                 data-en="Wild cove reached after a nice walk: few tourists and stunning water.">Cala selvaggia raggiungibile con una bella camminata: pochi turisti e acqua spettacolare.</p>
+              <div class="text-xs text-navy/60"
+                   data-it="🛵 15 min + 25 min trekking"
+                   data-en="🛵 15 min + 25 min hike">🛵 15 min + 25 min trekking</div>
+            </div>
+          </article>
+
+          <article class="bg-calce rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+            <img src="assets/beaches/tabaccara.jpg" class="aspect-[4/3] w-full object-cover" alt="Cala Tabaccara, Lampedusa" loading="lazy" />
+            <div class="p-5 flex-1 flex flex-col">
+              <h3 class="font-serif text-xl mb-2">Cala Tabaccara</h3>
+              <p class="text-sm text-navy/70 mb-4 flex-1"
+                 data-it="Acqua color smeraldo, raggiungibile solo dal mare: tappa imperdibile dei tour in barca."
+                 data-en="Emerald water, reachable only from the sea: a must-stop on boat tours.">Acqua color smeraldo, raggiungibile solo dal mare: tappa imperdibile dei tour in barca.</p>
+              <div class="text-xs text-navy/60"
+                   data-it="⛵ Solo via mare"
+                   data-en="⛵ By boat only">⛵ Solo via mare</div>
+            </div>
+          </article>
+
+          <article class="bg-calce rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+            <img src="assets/beaches/cala-croce.jpg" class="aspect-[4/3] w-full object-cover" alt="Cala Croce, Lampedusa" loading="lazy" />
+            <div class="p-5 flex-1 flex flex-col">
+              <h3 class="font-serif text-xl mb-2">Cala Croce</h3>
+              <p class="text-sm text-navy/70 mb-4 flex-1"
+                 data-it="Spiaggetta tranquilla a pochi minuti dal centro: perfetta per un bagno veloce."
+                 data-en="Quiet little beach a few minutes from town: perfect for a quick swim.">Spiaggetta tranquilla a pochi minuti dal centro: perfetta per un bagno veloce.</p>
+              <div class="text-xs text-navy/60"
+                   data-it="🛵 5 min in motorino"
+                   data-en="🛵 5 min by scooter">🛵 5 min in motorino</div>
+            </div>
+          </article>
+
+          <article class="bg-calce rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+            <img src="assets/beaches/guitgia.jpg" class="aspect-[4/3] w-full object-cover" alt="Spiaggia della Guitgia, Lampedusa" loading="lazy" />
+            <div class="p-5 flex-1 flex flex-col">
+              <h3 class="font-serif text-xl mb-2"
+                  data-it="Spiaggia della Guitgia" data-en="Guitgia Beach">Spiaggia della Guitgia</h3>
+              <p class="text-sm text-navy/70 mb-4 flex-1"
+                 data-it="Spiaggia urbana attrezzata, comoda e con bar e ristoranti vicini."
+                 data-en="Equipped town beach, easy access with bars and restaurants nearby.">Spiaggia urbana attrezzata, comoda e con bar e ristoranti vicini.</p>
+              <div class="text-xs text-navy/60"
+                   data-it="🚶 10 min a piedi"
+                   data-en="🚶 10 min walk">🚶 10 min a piedi</div>
+            </div>
+          </article>
+
+          <article class="bg-calce rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+            <img src="assets/beaches/cala-creta.jpg" class="aspect-[4/3] w-full object-cover" alt="Cala Creta, Lampedusa" loading="lazy" />
+            <div class="p-5 flex-1 flex flex-col">
+              <h3 class="font-serif text-xl mb-2">Cala Creta</h3>
+              <p class="text-sm text-navy/70 mb-4 flex-1"
+                 data-it="Cala spettacolare con acque cristalline e fondali bassi: perfetta per fare il bagno e snorkeling."
+                 data-en="Spectacular cove with crystal-clear shallow water: perfect for swimming and snorkeling.">Cala spettacolare con acque cristalline e fondali bassi: perfetta per fare il bagno e snorkeling.</p>
+              <div class="text-xs text-navy/60"
+                   data-it="🛵 10 min in motorino"
+                   data-en="🛵 10 min by scooter">🛵 10 min in motorino</div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BOAT -->
+    <section id="boat" class="py-20 md:py-28 px-6">
+      <div class="max-w-6xl mx-auto">
+
+        <div class="text-center mb-12">
+          <span class="inline-block text-xs tracking-[0.2em] uppercase text-turchese mb-3"
+                data-it="In barca" data-en="By boat">In barca</span>
+          <h2 class="font-serif text-4xl md:text-5xl mb-3" data-reveal
+              data-it="Vivi Lampedusa dal mare"
+              data-en="Experience Lampedusa from the sea">Vivi Lampedusa dal mare</h2>
+          <p class="text-navy/70 max-w-2xl mx-auto"
+             data-it="Le cale più belle si raggiungono solo via mare. Due opzioni a seconda di quanto vuoi essere coccolato — o libero."
+             data-en="The most beautiful coves are reachable only by sea. Two options, depending on how much you want to be pampered — or free.">Le cale più belle si raggiungono solo via mare. Due opzioni a seconda di quanto vuoi essere coccolato — o libero.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8" data-reveal>
+
+          <!-- Tour Giuseppina Madre -->
+          <article class="bg-calce border border-sabbia rounded-2xl overflow-hidden flex flex-col">
+            <img src="assets/boat/giuseppina.jpg" class="aspect-[16/10] w-full object-cover" alt="Tour in barca - Giuseppina Madre" loading="lazy" />
+            <div class="p-6 flex-1 flex flex-col">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="text-2xl" aria-hidden="true">⚓</span>
+                <h3 class="font-serif text-2xl">Giuseppina Madre</h3>
+              </div>
+              <p class="text-navy/80 leading-relaxed mb-4"
+                 data-it="Tour giornaliero organizzato con guida: giro dell'isola, soste per bagno nelle cale più belle, pranzo a bordo."
+                 data-en="Guided full-day tour: island circumnavigation, swim stops at the best coves, lunch on board.">Tour giornaliero organizzato con guida: giro dell'isola, soste per bagno nelle cale più belle, pranzo a bordo.</p>
+
+              <div class="space-y-2 mt-auto">
+                <a href="tel:+393347248436" class="block text-turchese hover:underline">📞 +39 334 724 8436</a>
+                <a href="https://giuseppinamadreescursioniinbarcalampedusa.it/" target="_blank" rel="noopener"
+                   class="block text-turchese hover:underline text-sm">🌐 giuseppinamadreescursioniinbarcalampedusa.it</a>
+                <a href="https://www.instagram.com/giuseppina_madre_lampedusa/" target="_blank" rel="noopener"
+                   class="block text-turchese hover:underline text-sm">📷 @giuseppina_madre_lampedusa</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Noleggio motoscafo 50cv -->
+          <article class="bg-calce border border-sabbia rounded-2xl overflow-hidden flex flex-col">
+            <img src="assets/boat/motoscafo.jpg" class="aspect-[16/10] w-full object-cover" alt="Motoscafo 50cv in noleggio a Lampedusa" loading="lazy" />
+            <div class="p-6 flex-1 flex flex-col">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="text-2xl" aria-hidden="true">🚤</span>
+                <h3 class="font-serif text-2xl"
+                    data-it="Noleggio motoscafo 50cv" data-en="50hp motorboat rental">Noleggio motoscafo 50cv</h3>
+              </div>
+              <p class="text-navy/80 leading-relaxed mb-4"
+                 data-it="Motoscafo 50cv guidabile senza patente nautica. Esplora le cale al tuo ritmo, in piena libertà."
+                 data-en="50hp motorboat that does not require a boat license. Explore the coves at your own pace, free as a fish.">Motoscafo 50cv guidabile senza patente nautica. Esplora le cale al tuo ritmo, in piena libertà.</p>
+
+              <div class="bg-turchese/10 rounded-lg px-3 py-2 mb-4 text-sm flex items-center gap-2">
+                <span aria-hidden="true">ℹ️</span>
+                <span data-it="Senza patente nautica"
+                      data-en="No boat license required">Senza patente nautica</span>
+              </div>
+
+              <div class="space-y-2 mt-auto">
+                <a href="tel:+393382927320" class="block text-turchese hover:underline">📞 +39 338 292 7320</a>
+                <a href="tel:+393398297583" class="block text-turchese hover:underline">📞 +39 339 829 7583</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOD -->
+    <section id="food" class="py-20 md:py-28 px-6 bg-sabbia/30">
+      <div class="max-w-6xl mx-auto">
+
+        <div class="text-center mb-12">
+          <span class="inline-block text-xs tracking-[0.2em] uppercase text-turchese mb-3"
+                data-it="Ristoranti & Bar" data-en="Restaurants & Bars">Ristoranti & Bar</span>
+          <h2 class="font-serif text-4xl md:text-5xl mb-3" data-reveal
+              data-it="Dove mangiare a Lampedusa"
+              data-en="Where to eat in Lampedusa">Dove mangiare a Lampedusa</h2>
+          <p class="text-navy/70 max-w-2xl mx-auto"
+             data-it="I nostri preferiti di sempre, più qualche perla suggerita dalle recensioni."
+             data-en="Our long-time favorites, plus a few gems from reviews.">I nostri preferiti di sempre, più qualche perla suggerita dalle recensioni.</p>
+        </div>
+
+        <!-- Filippo's picks -->
+        <div class="flex items-center gap-3 mb-6">
+          <span class="bg-corallo text-calce text-xs px-3 py-1 rounded-full font-medium"
+                data-it="I preferiti di Filippo" data-en="Filippo's picks">I preferiti di Filippo</span>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12" data-reveal>
+
+          <article class="bg-calce rounded-2xl p-5 border border-sabbia flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h4 class="font-serif text-xl">Nautic</h4>
+              <span class="text-corallo font-semibold shrink-0">€€</span>
+            </div>
+            <p class="text-sm text-navy/70 mb-3 flex-1"
+               data-it="Ristorante · pesce fresco e cucina marinara"
+               data-en="Restaurant · fresh fish and seafood">Ristorante · pesce fresco e cucina marinara</p>
+            <div class="text-xs text-navy/60 mb-2"
+                 data-it="📍 3 min a piedi"
+                 data-en="📍 3 min walk">📍 3 min a piedi</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Nautic+Lampedusa" target="_blank" rel="noopener"
+               class="text-xs text-turchese hover:underline mt-auto"
+               data-it="📍 Apri in Maps" data-en="📍 Open in Maps">📍 Apri in Maps</a>
+          </article>
+
+          <article class="bg-calce rounded-2xl p-5 border border-sabbia flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h4 class="font-serif text-xl">Gastronomia Martorana</h4>
+              <span class="text-corallo font-semibold shrink-0">€</span>
+            </div>
+            <p class="text-sm text-navy/70 mb-3 flex-1"
+               data-it="Gastronomia · take-away di pesce e piatti pronti"
+               data-en="Deli · take-away seafood and ready meals">Gastronomia · take-away di pesce e piatti pronti</p>
+            <div class="text-xs text-navy/60 mb-2"
+                 data-it="📍 5 min a piedi"
+                 data-en="📍 5 min walk">📍 5 min a piedi</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Gastronomia+Martorana+Lampedusa" target="_blank" rel="noopener"
+               class="text-xs text-turchese hover:underline mt-auto"
+               data-it="📍 Apri in Maps" data-en="📍 Open in Maps">📍 Apri in Maps</a>
+          </article>
+
+          <article class="bg-calce rounded-2xl p-5 border border-sabbia flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h4 class="font-serif text-xl">Bar Isola delle Rose</h4>
+              <span class="text-corallo font-semibold shrink-0">€</span>
+            </div>
+            <p class="text-sm text-navy/70 mb-3 flex-1"
+               data-it="Bar · la nostra colazione preferita"
+               data-en="Café · our favorite breakfast">Bar · la nostra colazione preferita</p>
+            <div class="text-xs text-navy/60 mb-2"
+                 data-it="📍 4 min a piedi"
+                 data-en="📍 4 min walk">📍 4 min a piedi</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Bar+Isola+delle+Rose+Lampedusa" target="_blank" rel="noopener"
+               class="text-xs text-turchese hover:underline mt-auto"
+               data-it="📍 Apri in Maps" data-en="📍 Open in Maps">📍 Apri in Maps</a>
+          </article>
+
+          <article class="bg-calce rounded-2xl p-5 border border-sabbia flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h4 class="font-serif text-xl">Gelateria Oscia</h4>
+              <span class="text-corallo font-semibold shrink-0">€</span>
+            </div>
+            <p class="text-sm text-navy/70 mb-3 flex-1"
+               data-it="Gelateria · gelato artigianale"
+               data-en="Gelato · artisanal ice cream">Gelateria · gelato artigianale</p>
+            <div class="text-xs text-navy/60 mb-2"
+                 data-it="📍 5 min a piedi"
+                 data-en="📍 5 min walk">📍 5 min a piedi</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Gelateria+Oscia+Lampedusa" target="_blank" rel="noopener"
+               class="text-xs text-turchese hover:underline mt-auto"
+               data-it="📍 Apri in Maps" data-en="📍 Open in Maps">📍 Apri in Maps</a>
+          </article>
+
+          <article class="bg-calce rounded-2xl p-5 border border-sabbia flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h4 class="font-serif text-xl">Bar dell'Amicizia</h4>
+              <span class="text-corallo font-semibold shrink-0">€</span>
+            </div>
+            <p class="text-sm text-navy/70 mb-3 flex-1"
+               data-it="Gelateria & bar · gelato classico, ottima granita"
+               data-en="Gelato & bar · classic ice cream, great granita">Gelateria & bar · gelato classico, ottima granita</p>
+            <div class="text-xs text-navy/60 mb-2"
+                 data-it="📍 6 min a piedi"
+                 data-en="📍 6 min walk">📍 6 min a piedi</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Bar+dell%27Amicizia+Lampedusa" target="_blank" rel="noopener"
+               class="text-xs text-turchese hover:underline mt-auto"
+               data-it="📍 Apri in Maps" data-en="📍 Open in Maps">📍 Apri in Maps</a>
+          </article>
+
+        </div>
+
+        <!-- Top-rated -->
+        <div class="flex items-center gap-3 mb-6">
+          <span class="bg-turchese text-calce text-xs px-3 py-1 rounded-full font-medium"
+                data-it="Top-rated su Google & TripAdvisor"
+                data-en="Top-rated on Google & TripAdvisor">Top-rated su Google & TripAdvisor</span>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" data-reveal>
+
+          <article class="bg-calce rounded-2xl p-5 border border-sabbia flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h4 class="font-serif text-lg">Cavalluccio Marino</h4>
+              <span class="text-corallo font-semibold shrink-0">€€€</span>
+            </div>
+            <p class="text-sm text-navy/70 mb-3 flex-1"
+               data-it="Ristorante · cucina di pesce creativa"
+               data-en="Restaurant · creative seafood cuisine">Ristorante · cucina di pesce creativa</p>
+            <div class="text-xs text-navy/60 mb-2"
+                 data-it="📍 8 min a piedi"
+                 data-en="📍 8 min walk">📍 8 min a piedi</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Cavalluccio+Marino+Lampedusa" target="_blank" rel="noopener"
+               class="text-xs text-turchese hover:underline mt-auto"
+               data-it="📍 Apri in Maps" data-en="📍 Open in Maps">📍 Apri in Maps</a>
+          </article>
+
+          <article class="bg-calce rounded-2xl p-5 border border-sabbia flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h4 class="font-serif text-lg">Lipadusa</h4>
+              <span class="text-corallo font-semibold shrink-0">€€</span>
+            </div>
+            <p class="text-sm text-navy/70 mb-3 flex-1"
+               data-it="Ristorante · cucina locale tradizionale"
+               data-en="Restaurant · traditional local cuisine">Ristorante · cucina locale tradizionale</p>
+            <div class="text-xs text-navy/60 mb-2"
+                 data-it="📍 7 min a piedi"
+                 data-en="📍 7 min walk">📍 7 min a piedi</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Lipadusa+Lampedusa" target="_blank" rel="noopener"
+               class="text-xs text-turchese hover:underline mt-auto"
+               data-it="📍 Apri in Maps" data-en="📍 Open in Maps">📍 Apri in Maps</a>
+          </article>
+
+          <article class="bg-calce rounded-2xl p-5 border border-sabbia flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h4 class="font-serif text-lg">Terrazza Marabù</h4>
+              <span class="text-corallo font-semibold shrink-0">€€</span>
+            </div>
+            <p class="text-sm text-navy/70 mb-3 flex-1"
+               data-it="Ristorante · pesce con vista sul porto"
+               data-en="Restaurant · seafood with port view">Ristorante · pesce con vista sul porto</p>
+            <div class="text-xs text-navy/60 mb-2"
+                 data-it="📍 6 min a piedi"
+                 data-en="📍 6 min walk">📍 6 min a piedi</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Terrazza+Marab%C3%B9+Lampedusa" target="_blank" rel="noopener"
+               class="text-xs text-turchese hover:underline mt-auto"
+               data-it="📍 Apri in Maps" data-en="📍 Open in Maps">📍 Apri in Maps</a>
+          </article>
+
+          <article class="bg-calce rounded-2xl p-5 border border-sabbia flex flex-col">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h4 class="font-serif text-lg">Pasticceria Sciali</h4>
+              <span class="text-corallo font-semibold shrink-0">€</span>
+            </div>
+            <p class="text-sm text-navy/70 mb-3 flex-1"
+               data-it="Pasticceria · cannoli e dolci siciliani"
+               data-en="Pastry · cannoli and Sicilian sweets">Pasticceria · cannoli e dolci siciliani</p>
+            <div class="text-xs text-navy/60 mb-2"
+                 data-it="📍 4 min a piedi"
+                 data-en="📍 4 min walk">📍 4 min a piedi</div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Pasticceria+Sciali+Lampedusa" target="_blank" rel="noopener"
+               class="text-xs text-turchese hover:underline mt-auto"
+               data-it="📍 Apri in Maps" data-en="📍 Open in Maps">📍 Apri in Maps</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-navy text-calce/80 py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+
+        <div>
+          <div class="font-serif text-xl text-calce mb-2">Filippo's Cozy House</div>
+          <p class="text-sm leading-relaxed">Via Trapani 1, 92010 Lampedusa (AG), Italia</p>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase tracking-wider text-calce/60 mb-3"
+              data-it="Codici legali" data-en="Legal codes">Codici legali</h4>
+          <p class="text-sm font-mono mb-1">CIR: 19084020C231965</p>
+          <p class="text-sm font-mono">CIN: IT084020C2U9AQ8YR6</p>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase tracking-wider text-calce/60 mb-3"
+              data-it="Prenota" data-en="Book">Prenota</h4>
+          <a href="https://www.airbnb.it/rooms/15082640" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 bg-corallo text-calce text-sm px-4 py-2 rounded-full hover:bg-corallo/90 transition"
+             data-it="Prenota su Airbnb →" data-en="Book on Airbnb →">Prenota su Airbnb →</a>
+        </div>
+
+      </div>
+
+      <div class="border-t border-calce/10 pt-6 text-xs text-calce/50 flex flex-col md:flex-row justify-between gap-2">
+        <p>Made with ❤️ in Lampedusa</p>
+        <p>© 2026 Filippo's Cozy House</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Motion One via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/motion@10/dist/motion.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
